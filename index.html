@@ -1,0 +1,51 @@
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.17.0"
+  }
+}
+</script>
+  <!-- Add Google Fonts Link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <div class="container">
+    <button id="themeToggleButton" class="theme-toggle-button" aria-label="Switch to dark mode">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-1.79 15.18l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><path d="M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.11-1.36c-0.98,1.37-2.58,2.26-4.39,2.26 c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.39C12.92,3.04,12.46,3,12,3L12,3z"/></g></svg>
+    </button>
+    <div class="header-content">
+      <h1>HSK Flashcards</h1>
+      <p>
+        Select one or more HSK levels below to begin studying Chinese characters.
+      </p>
+      <div id="hskFilterContainer" class="hsk-filter-container" role="group" aria-label="Filter by HSK Level">
+        <button class="hsk-filter-button" role="switch" aria-checked="false" data-hsk-level="HSK 1">HSK 1</button>
+        <button class="hsk-filter-button" role="switch" aria-checked="false" data-hsk-level="HSK 2">HSK 2</button>
+        <button class="hsk-filter-button" role="switch" aria-checked="false" data-hsk-level="HSK 3">HSK 3</button>
+        <button class="hsk-filter-button" role="switch" aria-checked="false" data-hsk-level="HSK 4">HSK 4</button>
+        <button class="hsk-filter-button" role="switch" aria-checked="false" data-hsk-level="HSK 5">HSK 5</button>
+      </div>
+      <div id="errorMessage" class="error-message"></div>
+    </div>
+
+    <div id="flashcardViewer" class="flashcard-viewer">
+      <!-- The single, large flashcard will be generated here -->
+    </div>
+
+    <div id="navigationControls" class="navigation-controls">
+      <button id="prevButton" class="nav-button" aria-label="Previous card">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12l4.58-4.59z"/></svg>
+      </button>
+       <button id="shuffleButton" class="nav-button" aria-label="Shuffle deck">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/></svg>
+      </button>
+      <span id="cardCounter" class="card-counter"></span>
+      <button id="nextButton" class="nav-button" aria-label="Next card">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
+      </button>
+    </div>
+
+  </div><link rel="stylesheet" href="/index.css">
+<script type="module" src="/index.tsx"></script>
