@@ -3,7 +3,7 @@
 ![back](./fc2.png)
 
 
-https://chinese-language-flashcards.web.app
+<https://chinese-language-flashcards.web.app>
 
 
 ## Run Locally
