@@ -52,7 +52,7 @@
   --c-button-text: var(--light-button-text);
 
   --flashcard-width: clamp(280px, 85vw, 450px);
-  --flashcard-height: calc(var(--flashcard-width) / 1.6);
+  --flashcard-height: calc(var(--flashcard-width) / 1.2);
 }
 
 html.dark-mode {
@@ -210,7 +210,8 @@ p {
 .flashcard {
   background-color: transparent;
   width: var(--flashcard-width);
-  height: var(--flashcard-height);
+  min-height: var(--flashcard-height);
+  height: auto;
   border: none;
   border-radius: 12px;
   cursor: pointer;
@@ -221,12 +222,14 @@ p {
 .flashcard-inner {
   position: relative;
   width: 100%;
-  height: 100%;
+  min-height: var(--flashcard-height);
+  height: auto;
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
   box-shadow: 0 2px 4px var(--c-shadow-1);
   border-radius: 12px;
+  display: grid;
 }
 
 .flashcard.flipped .flashcard-inner {
@@ -235,14 +238,15 @@ p {
 
 .flashcard-front,
 .flashcard-back {
-  position: absolute;
+  position: relative;
+  grid-area: 1 / 1 / 2 / 2;
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
@@ -407,7 +411,7 @@ p {
 .examples-container {
   width: 100%;
   text-align: left;
-  overflow-y: auto;
+  overflow: visible;
   flex-grow: 1; /* Allow container to fill space */
   min-height: 0; /* Prevent flexbox overflow */
   border-top: 1px solid var(--c-border);
