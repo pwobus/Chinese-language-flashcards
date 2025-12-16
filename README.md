@@ -44,7 +44,7 @@ Back of a flashcard:
 - `npm run preview` – Preview the production build locally.
 
 ## Project Structure
-- `index.tsx` – App entry point and flashcard logic.
+- `index.ts` – App entry point and flashcard logic.
 - `index.css` – Styling for the flashcard layout and controls.
 - `fc1.png`, `fc2.png` – Example front/back flashcard images used in the README.
 
