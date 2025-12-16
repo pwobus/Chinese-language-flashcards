@@ -21,9 +21,9 @@ Back of a flashcard:
 ![Flashcard back](./fc2.png)
 
 ## Tech Stack
-- **Frontend:** React + TypeScript
+- **Frontend:** TypeScript
 - **Build tooling:** Vite
-- **Styling:** CSS modules
+- **Styling:** CSS
 
 ## Run Locally
 **Prerequisites:** Node.js (v18+ recommended) and npm.
