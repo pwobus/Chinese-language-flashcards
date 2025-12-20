@@ -307,7 +307,7 @@ p {
   white-space: pre-wrap;
 }
 
-.hanza-text {
+.hanzi-text {
   font-size: clamp(3em, 10vw, 5em);
   font-weight: 500;
   line-height: 1.1;
